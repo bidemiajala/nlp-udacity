@@ -29,3 +29,8 @@ Run `npm run test` it runs the jest tests and prints the test coverage report af
 
 ## Offline Capabilities
 This project has installed service workers. To test, stop the servers and refresh the page - the page should remain as is. 
+
+## Note
+Create a `.env` and add the following env variables given after registering on Aylien
+- `API_ID=*********`
+- `API_KEY=**********`
