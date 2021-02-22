@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Evaluating a new article with NLP</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="heading">
+            <h2> Udacity Frontend Web Developer Nanodegree Program </h2>
+        </div>
+    </header>
+
+    <main>
+        <h1>Evaluate a news article or text with Aylient Natural Language Processing</h1>
+
+        <div class="project-description">
+            <p>
+                This is a web tool that allows users to run Natural Language Processing (NLP)
+                on articles or blogs found on other websites. NLP is the ability of an
+                application to understand the human language, written or oral.
+            </p>
+        </div>
+
+        <h2>Have a sense of your article. Share your link below and submit.</h2>
+
+
+        <section class="errors">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <div id="error"></div>
+        </section>
+
+
+        <section>
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <input id="name" class="inputBox" type="url" name="test-url" value=""
+                    placeholder="Enter your link here...">
+                <input type="submit" class="submitBtn" name="" value="submit"
+                    onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+            </form>
+            <section>
+
+                <section class="url-results">
+                    <ul>
+                        <li>
+                            <h3>Text Excerpt:</h3>
+                            <b>
+                                <span id="excerpt" class="answer"></span>
+                            </b>
+                        </li>
+
+                        <li>
+                            <h3>Text Polarity:</h3>
+                            <b>
+                                <span id="polarity" class="answer"></span>
+                            </b>
+                        </li>
+
+                        <li>
+                            <h3>Polarity Confidence: </h3>
+                            <b>
+                                <span id="polarity_confidence" class="answer"></span>
+                            </b>
+                        </li>
+
+                        <li>
+                            <h3>Text Subjectivity:</h3>
+                            <b>
+                                <span id="subjectivity" class="answer"></span>
+                            </b>
+                        </li>
+
+                        <li>
+                            <h3>Subjectivity Confidence: </h3>
+                            <b>
+                                <span id="subjectivity_confidence" class="answer"></span>
+                            </b>
+                        </li>
+                    </ul>
+                </section>
+    </main>
+
+    <footer>
+        <div>
+            Made by Bidemi Ajala
+        </div>
+    </footer>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js').then(registration => {
+                    console.log('SW registered: ', registration);
+                });
+            });
+        } else {
+            console.log("Service worker errored");
+        }
+    </script>
+
+</body>
+
+</html>
